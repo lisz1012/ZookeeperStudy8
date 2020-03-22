@@ -51,7 +51,7 @@ public class WatcherCallback implements AsyncCallback.StringCallback, AsyncCallb
 
     @Override
     public void processResult(int rc, String path, Object ctx, List<String> children, Stat stat) {
-        System.out.println(threadName + " is looking lock");
+        System.out.println(threadName + " is looking lock ...");
         Collections.sort(children);
         int index = children.indexOf(path.substring(1));
         if (index == 0) {
