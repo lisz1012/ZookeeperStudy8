@@ -55,7 +55,7 @@ public class WatcherCallback implements AsyncCallback.StringCallback, AsyncCallb
         Collections.sort(children);
         int index = children.indexOf(path.substring(1));
         if (index == 0) {
-            System.out.println(threadName + " is the first and gets the lock.");
+            System.out.println(threadName + " is the first and gets the lock");
             latch.countDown();
         } else {
             zk.exists("/" + children.get(index - 1), this, this, "asd");
